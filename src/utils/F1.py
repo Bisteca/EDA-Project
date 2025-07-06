@@ -40,7 +40,8 @@ df_max_ham_per_race = df_year[(df_year['forename'] == 'Max') | (df_year['forenam
 
 
 
-df_max_ham_per_race.loc[:, 'wins'] = df_max_ham_per_race['positionOrder'] == 1
+df_max_ham_per_race = df_max_ham_per_race.assign(wins=df_max_ham_per_race['positionOrder'] == 1)
+
 
 
 df_max_ham_total = df_max_ham_per_race.groupby(['year', 'forename', 'surname']).agg({
