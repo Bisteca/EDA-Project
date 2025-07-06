@@ -1,6 +1,5 @@
-from plotly.offline import init_notebook_mode, iplot, plot
+# from plotly.offline import init_notebook_mode, iplot, plot
 import plotly as py
-init_notebook_mode(connected=True)
 import plotly.graph_objs as go
 import numpy as np
 import matplotlib.pylab as plt
