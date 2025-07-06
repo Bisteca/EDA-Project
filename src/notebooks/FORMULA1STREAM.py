@@ -8,10 +8,11 @@ pd.set_option("display.max_rows", 500)
 df_1 = pd.DataFrame()
 fuente_1 = ""
 
-df_races = pd.read_csv('data/races.csv')
-df_results = pd.read_csv('data/results.csv')
-df_drivers = pd.read_csv('data/drivers.csv')
-df_constructors = pd.read_csv('data/constructors.csv')
+df_races = pd.read_csv('../data/races.csv')
+df_results = pd.read_csv('../data/results.csv')
+df_drivers = pd.read_csv('../data/drivers.csv')
+df_constructors = pd.read_csv('../data/constructors.csv')
+
 
 df_rrc = df_results.merge(df_races, on='raceId', how='left') \
                       .merge(df_constructors, on='constructorId', how='left')
