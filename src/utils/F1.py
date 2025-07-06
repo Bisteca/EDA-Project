@@ -1,8 +1,8 @@
+import streamlit as st
+import pandas as pd
 #from plotly.offline import init_notebook_mode, iplot, plot
-import plotly as py
 import plotly.graph_objs as go
-import numpy as np
-import matplotlib.pylab as plt
+
 import pandas as pd
 pd.set_option("display.max_rows", 500)
 df_1 = pd.DataFrame()
