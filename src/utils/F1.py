@@ -105,7 +105,7 @@ layout = dict(title = 'Constructors points per year',
 
 fig = go.Figure(data = traces, layout=layout)
 fig.update_layout(
-    height=800,  # aumenta a altura total do gráfico
+    height=800,  
     title='Constructors points per year',
     xaxis=dict(title='Year', ticklen=5),
     yaxis=dict(title='Points')
@@ -113,7 +113,7 @@ fig.update_layout(
 
 fig.update_yaxes(rangemode="tozero")
 fig.show()
-fig.write_image("meu_grafico1.png")
+
 
 
 df_verstappen = df_max_ham_total[df_max_ham_total['forename'] == 'Max']
@@ -139,9 +139,15 @@ data = [trace1, trace2]
 layout = go.Layout(barmode = "group")
 
 fig = go.Figure(data = data, layout = layout)
+fig.update_layout(
+    height=800,  
+    title='Max vs Lewis (2015 - 2024)',
+    xaxis=dict(title='Year', ticklen=5),
+    yaxis=dict(title='Points')
+)
 
 fig.show()
-fig.write_image("meu_grafico2.png")
+
 
 trace_ham = go.Bar(
     x = ham['year'],
@@ -189,8 +195,13 @@ data = [trace_ham, trace_vers]
 
 fig = go.Figure(data = data, layout = layout)
 fig.update_layout(yaxis2=dict(matches='y1'))
+fig.update_layout(
+    height=800,  # aumenta a altura total do gráfico
+    title='Lewis (2007 - 2011) vs Max (2015 - 2019). Firts 5 seasons.',
+    xaxis=dict(title='Year', ticklen=5),
+    yaxis=dict(title='Points')
+)
 
-fig.write_image("meu_grafico3.png")
 fig.show()
 
 
