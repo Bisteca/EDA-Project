@@ -35,10 +35,11 @@ df_rrd = df_rrd[[ 'grid','positionOrder', 'points', 'rank',
        'year', 'round', 'name',
        'forename', 'surname', 'nationality']]
 
-df_year = df_rrd[df_rrd['year'] >= 2015]
-df_max_ham_per_race = df_year[(df_year['forename'] == 'Max') | (df_year['forename'] == 'Lewis')]
+df_year = df_rrd[df_rrd['year'] >= 2015].copy()
+df_max_ham_per_race = df_year[(df_year['forename'] == 'Max') | (df_year['forename'] == 'Lewis')].copy()
 
-df_max_ham_per_race = df_max_ham_per_race.copy()
+
+
 df_max_ham_per_race.loc[:, 'wins'] = df_max_ham_per_race['positionOrder'] == 1
 
 
