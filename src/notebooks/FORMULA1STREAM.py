@@ -2,16 +2,21 @@ import streamlit as st
 import pandas as pd
 #from plotly.offline import init_notebook_mode, iplot, plot
 import plotly.graph_objs as go
-
+from pathlib import Path
 import pandas as pd
 pd.set_option("display.max_rows", 500)
 df_1 = pd.DataFrame()
 fuente_1 = ""
 
-df_races = pd.read_csv('../data/data/races.csv')
-df_results = pd.read_csv('../data/data/results.csv')
-df_drivers = pd.read_csv('../data/data/drivers.csv')
-df_constructors = pd.read_csv('../data/data/constructors.csv')
+
+BASE_DIR = Path(__file__).resolve().parent
+
+DATA_DIR = BASE_DIR.parent / 'data' / 'data'
+
+df_races = pd.read_csv(DATA_DIR / 'races.csv')
+df_results = pd.read_csv(DATA_DIR / 'results.csv')
+df_drivers = pd.read_csv(DATA_DIR / 'drivers.csv')
+df_constructors = pd.read_csv(DATA_DIR / 'constructors.csv')
 
 
 
