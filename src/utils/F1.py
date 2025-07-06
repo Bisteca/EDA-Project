@@ -1,6 +1,5 @@
-from plotly.offline import init_notebook_mode, iplot, plot
+#from plotly.offline import init_notebook_mode, iplot, plot
 import plotly as py
-init_notebook_mode(connected=True)
 import plotly.graph_objs as go
 import numpy as np
 import matplotlib.pylab as plt
@@ -8,6 +7,7 @@ import pandas as pd
 pd.set_option("display.max_rows", 500)
 df_1 = pd.DataFrame()
 fuente_1 = ""
+
 
 df_races = pd.read_csv(r'C:\Users\Renan Muniz\Online_Env\REPO_TEST\ONLINE_DS_THEBRIDGE_RENAN_MUNIZ\bootcamp_renan\EDA PROJECT\archive (2)\races.csv')
 df_results = pd.read_csv(r'C:\Users\Renan Muniz\Online_Env\REPO_TEST\ONLINE_DS_THEBRIDGE_RENAN_MUNIZ\bootcamp_renan\EDA PROJECT\archive (2)\results.csv')
@@ -38,6 +38,7 @@ df_rrd = df_rrd[[ 'grid','positionOrder', 'points', 'rank',
 df_year = df_rrd[df_rrd['year'] >= 2015]
 df_max_ham_per_race = df_year[(df_year['forename'] == 'Max') | (df_year['forename'] == 'Lewis')]
 
+df_max_ham_per_race = df_max_ham_per_race.copy()
 df_max_ham_per_race.loc[:, 'wins'] = df_max_ham_per_race['positionOrder'] == 1
 
 
@@ -110,6 +111,7 @@ fig.update_layout(
 
 fig.update_yaxes(rangemode="tozero")
 fig.show()
+fig.write_image("meu_grafico1.png")
 
 
 df_verstappen = df_max_ham_total[df_max_ham_total['forename'] == 'Max']
@@ -137,6 +139,7 @@ layout = go.Layout(barmode = "group")
 fig = go.Figure(data = data, layout = layout)
 
 fig.show()
+fig.write_image("meu_grafico2.png")
 
 trace_ham = go.Bar(
     x = ham['year'],
@@ -185,5 +188,7 @@ data = [trace_ham, trace_vers]
 fig = go.Figure(data = data, layout = layout)
 fig.update_layout(yaxis2=dict(matches='y1'))
 
+fig.write_image("meu_grafico3.png")
 fig.show()
+
 
