@@ -1,4 +1,4 @@
-#🏎️ Formula 1 Performance Analysis (2015 - 2024)
+# 🏎️ Formula 1 Performance Analysis (2015 - 2024)
 This project presents a comprehensive data-driven analysis of Formula 1 team and driver performance between 2015 and 2024. By leveraging Python, data visualization, and interactive web tools, we aim to explore how the competitive landscape of Formula 1 has evolved, focusing particularly on the rivalry between Mercedes, Red Bull, Lewis Hamilton, and Max Verstappen.
 
 
