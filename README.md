@@ -5,10 +5,10 @@ This project presents a comprehensive data-driven analysis of Formula 1 team and
 ## 📌 Project Objective
 The main objective of this project is to:
 
-✅ Compare the dominance periods of Mercedes and Red Bull in Formula 1
-✅ Analyze the evolution of team and driver performance over a 10-year period
-✅ Explore whether Max Verstappen's 2023 season represents the most dominant performance in F1 history
-✅ Compare the first 5 seasons of Lewis Hamilton and Max Verstappen to assess who had the stronger career start
+✅Compare the dominance periods of Mercedes and Red Bull in Formula 1
+✅Analyze the evolution of team and driver performance over a 10-year period
+✅Explore whether Max Verstappen's 2023 season represents the most dominant performance in F1 history
+✅Compare the first 5 seasons of Lewis Hamilton and Max Verstappen to assess who had the stronger career start
 
 Through these analyses, we aim to validate or refute the proposed hypotheses.
 ## 🎯 Project Hypotheses
