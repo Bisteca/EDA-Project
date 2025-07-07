@@ -50,7 +50,9 @@ Drivers' Championship standings
 Individual driver performance statistics
 ## 🧑‍💻 Author
 Renan Muniz
+
 Data Science Student at The Bridge
+
 GitHub: Bisteca
 
 ## ⚠️ Disclaimer
